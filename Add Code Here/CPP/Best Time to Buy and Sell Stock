@@ -1,0 +1,21 @@
+#include <bits/stdc++.h>
+
+using namespace std;
+
+int main()
+{
+    // You want to maximize your profit by choosing a single day to buy one stock
+    // and choosing a different day in the future to sell that stock.
+    
+    vector<int>prices={7,1,5,3,6,4};
+    int mn=prices[0], mx=0;
+    
+    for(int i=1; i<prices.size(); i++)
+    {
+        mx=max(mx,prices[i]-mn);
+        mn=min(mn,prices[i]);
+    }
+    cout<<mx;
+    
+    return 0;
+}
