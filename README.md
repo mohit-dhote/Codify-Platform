@@ -35,7 +35,7 @@
 - Add your name to the contributorsList file
 - Try to keep pull requests small to minimize merge conflicts
 
-## Mandatory Step :
+# Mandatory Step :
 - You have to star ⭐ this repository
 
 
