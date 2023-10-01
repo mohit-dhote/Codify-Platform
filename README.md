@@ -30,6 +30,15 @@
 
 </div>
 
+# Contribution Rules 📌:
+- Do NOT remove other content.
+- Add your name to the contributorsList file
+- Try to keep pull requests small to minimize merge conflicts
+
+## Mandatory Step :
+- You have to star ⭐ this repository
+
+
 ## INSTRUCTIONS-
 
 - Fork this Repository using the button at the top on the right corner.
