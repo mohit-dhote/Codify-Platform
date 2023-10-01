@@ -7,7 +7,7 @@
 <div align="center">
 
 <a href="https://github.com/mohit-dhote/Code-Library/graphs/contributors">
-  <img src="https://contrib.rocks/image?repo=mohit-dhote/Code-Library"/>
+  <img src="https://contrib.rocks/image?repo=mohit-dhote/Code-Library" />
 </a>
   
   </div>
