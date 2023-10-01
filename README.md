@@ -32,7 +32,7 @@ This repository contains the following folders and files:
 - **contributing.md**: This file contains the guidelines for contributing to this repository.
 - **readme.md**: This file contains the introduction and overview of this repository.
 
-## Contributing to Hacktoberfest
+## Contributing to Hacktoberfest 2023
 
 Hacktoberfest is an annual event that encourages people to contribute to open-source projects. This year, it runs from October 1st to October 31st.
 
