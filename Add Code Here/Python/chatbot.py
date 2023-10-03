@@ -382,3 +382,5 @@ while True:
     else:
         speech("I'm sorry, I didn't understand that command. Can you please repeat or rephrase?")
 
+
+
