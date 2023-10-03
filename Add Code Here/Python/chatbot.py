@@ -12,6 +12,7 @@ from bs4 import BeautifulSoup
 import winsound
 import operator
 import random
+import pyttsx3
 
 # from decorator import tick_tock
 
@@ -326,3 +327,26 @@ while True:
 
     elif 'dice' in speechInput:
         die()
+
+def adjust_voice_tone_and_pacing(text):
+    # Initialize the text-to-speech engine
+    engine = pyttsx3.init()
+    
+    # Adjust the voice properties (you can experiment with these values)
+    rate = engine.getProperty('rate')  # Speed of speech
+    volume = engine.getProperty('volume')  # Volume (0.0 to 1.0)
+    
+    # Increase the rate (higher value makes it faster, e.g., 200)
+    engine.setProperty('rate', rate + 50)
+    
+    # Decrease the volume (lower value makes it quieter, e.g., 0.5)
+    engine.setProperty('volume', volume - 0.1)
+    
+    # Speak the text with adjusted tone and pacing
+    engine.say(text)
+    engine.runAndWait()
+
+# Example usage:
+adjusted_text = "This is an example of adjusted voice tone and pacing."
+adjust_voice_tone_and_pacing(adjusted_text) 
+
