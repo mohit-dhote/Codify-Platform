@@ -13,6 +13,9 @@ import winsound
 import operator
 import random
 import pyttsx3
+import spacy
+
+
 
 # from decorator import tick_tock
 
@@ -349,4 +352,35 @@ def adjust_voice_tone_and_pacing(text):
 # Example usage:
 adjusted_text = "This is an example of adjusted voice tone and pacing."
 adjust_voice_tone_and_pacing(adjusted_text) 
+
+# Load the English NLP model
+nlp = spacy.load("en_core_web_sm")
+
+# Function to perform NLP processing on user input
+def nlp_processing(text):
+    doc = nlp(text)
+    return doc
+
+# Example usage in your main loop
+while True:
+    speechInput = takeCommand().lower()
+    
+    # Perform NLP processing
+    doc = nlp_processing(speechInput)
+
+    # Extract named entities, keywords, or other useful information
+    named_entities = [ent.text for ent in doc.ents]
+    
+    # Add logic to handle specific commands or intents based on NLP output
+    if "time" in named_entities:
+        dateAndTime()
+    elif "search" in named_entities:
+        search()
+    # ... Add more intent-based logic here
+
+    # Default behavior if no specific intent is recognized
+    else:
+        speech("I'm sorry, I didn't understand that command. Can you please repeat or rephrase?")
+
+
 
