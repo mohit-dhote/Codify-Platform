@@ -353,6 +353,7 @@ def adjust_voice_tone_and_pacing(text):
 adjusted_text = "This is an example of adjusted voice tone and pacing."
 adjust_voice_tone_and_pacing(adjusted_text) 
 
+
 # Load the English NLP model
 nlp = spacy.load("en_core_web_sm")
 
@@ -383,4 +384,4 @@ while True:
         speech("I'm sorry, I didn't understand that command. Can you please repeat or rephrase?")
 
 
-
+  
