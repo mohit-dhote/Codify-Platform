@@ -1,0 +1,19 @@
+[
+    {
+        "RunType": "0",
+        "Exit": "esc+0",
+        "Toggle": "1+esc",
+        "Start": "*+esc",
+        "Stop": "esc+page up"
+    },
+    {
+        "x": "smol",
+        "shift+Q": "hello world 2",
+        "shift+F": "In publishing and graphic design, Lorem ipsum (/\u02ccl\u0254\u02d0.r\u0259m \u02c8\u026ap.s\u0259m/) is a placeholder text commonly used to demonstrate the visual form of a document or a typeface without relying on meaningful content. Lorem ipsum may be used as a placeholder before final copy is available. It is also used to temporarily replace text in a process called greeking, which allows designers to consider the form of a webpage or publication, without the meaning of the text influencing the design."
+    },
+    {
+        "f3": "volumedown",
+        "f7": "Brightness_Up",
+        "f8": "Brightness_Down"
+    }
+]
