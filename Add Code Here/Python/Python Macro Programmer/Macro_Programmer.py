@@ -40,20 +40,23 @@ def Macro():
     if is_running:
         print(macroString)
         print(type(macroString))
+        
         for key, macro in macroString.items():
             print(f"{key} : {macro}")
             ky.add_hotkey(key,default_Macro, args= [macro], suppress=True)
+            
         for key, remap in remapString.items():
             print(f"{key} : {remap}")
-            
             if remap in sp_Functions:
                 ky.add_hotkey(key,sp_Functions.get(remap), suppress=True)
+                
             else:
                 ky.add_hotkey(key,remap_Macro,args=[remap], suppress=True)
 
     elif not is_running:
         for macro in macroString.keys():            
             ky.remove_hotkey(macro)
+            
         for remap in remapString.keys():            
             ky.remove_hotkey(remap)
 
