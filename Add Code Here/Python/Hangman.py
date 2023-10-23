@@ -36,8 +36,8 @@ wordlist = loadWords()
 
 
 #The functions input
-#secret_word: string, the word the user is guessing
-#letters_guessed: list, what letters have been guessed so far
+#Secret_word: string, the word the user is guessing
+#Letters_guessed: list, what letters have been guessed so far
 
 def isWordGuessed(secret_word, letters_guessed):
     '''
