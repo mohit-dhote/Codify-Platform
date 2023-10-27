@@ -13,7 +13,7 @@ def nth_prime(length):
         limit = int(i ** 0.5)+1
         
         for j in Prime_List:
-            if (i/j).is_integer():
+            if (i%j)==0:
                 Isprime = False
                 break
             
@@ -30,7 +30,7 @@ def nth_prime(length):
 if __name__ =="__main__":
     start = time.perf_counter()
     
-    n=100000
+    n=1000000
     nth_prime(n)
     print(time.perf_counter() - start)
     # you can access all the primes found till N in the (Prime_List) list
