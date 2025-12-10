@@ -1,0 +1,59 @@
+#include <bits/stdc++.h>
+using namespace std;
+
+typedef pair<int, int> pii; // (distance, node)
+
+
+void dijkstra(int source, vector<vector<pii>>& graph, int V) {
+    vector<int> dist(V, INT_MAX); 
+    dist[source] = 0;
+
+    priority_queue<pii, vector<pii>, greater<pii>> pq;
+    pq.push({0, source});
+
+    while (!pq.empty()) {
+        int currentDist = pq.top().first;
+        int u = pq.top().second;
+        pq.pop();
+
+       
+        if (currentDist > dist[u]) continue;
+
+       
+        for (auto& edge : graph[u]) {
+            int v = edge.first;
+            int weight = edge.second;
+
+            if (dist[u] + weight < dist[v]) {
+                dist[v] = dist[u] + weight;
+                pq.push({dist[v], v});
+            }
+        }
+    }
+ 
+    cout << "Shortest distances from source " << source << ":\n";
+    for (int i = 0; i < V; i++) {
+        if (dist[i] == INT_MAX)
+            cout << i << " : INF\n";
+        else
+            cout << i << " : " << dist[i] << "\n";
+    }
+}
+
+int main() {
+    int V = 5; 
+    vector<vector<pii>> graph(V);
+
+   
+    graph[0].push_back({1, 4});
+    graph[0].push_back({2, 8});
+    graph[1].push_back({2, 3});
+    graph[1].push_back({4, 6});
+    graph[2].push_back({3, 2});
+    graph[3].push_back({4, 10});
+
+    int source = 0;
+    dijkstra(source, graph, V);
+
+    return 0;
+}
